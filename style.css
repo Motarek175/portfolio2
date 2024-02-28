@@ -204,6 +204,8 @@ header .header .container .links ul li {
   height: 250px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px #ff7f50;
+  animation: up-and-down 3s linear infinite;
+  position: relative;
 }
 
 .landing .icons {
@@ -586,5 +588,15 @@ header .header .container .links ul li {
     border-radius: 0;
     width: 50%;
     height: 100%;
+  }
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: -20px;
+  }
+  50% {
+    top: 0px;
   }
 }
