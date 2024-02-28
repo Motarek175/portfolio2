@@ -675,6 +675,7 @@ header .header .container .links ul li {
   .contact .phone a,
   .contact .mail a {
     font-size: 15px;
+    margin-bottom: 10px;
   }
 }
 @keyframes cursor {
