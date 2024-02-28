@@ -658,6 +658,14 @@ header .header .container .links ul li {
     grid-column-start: 1;
     grid-column-end: 8;
   }
+  .contact .follow .social h3,
+  .contact .follow .social i,
+  .contact .phone i,
+  .contact .mail i,
+  .contact .phone a,
+  .contact .mail a {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 430px) {
