@@ -461,67 +461,71 @@ header .header .container .links ul li {
 
 .my-skills .container {
   width: 100%;
-  padding: 20px 80px;
+  padding: 150px 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.my-skills .skills {
-  flex: 1;
-  padding: 0 0 0 100px;
+.my-skills .container .imgs {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-skills .container .imgs img {
+  width: 130px;
+  height: 130px;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.my-skills .container .imgs img:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 
 @media (max-width: 991px) {
-  .my-skills .container img {
-    display: none;
+  .my-skills .container .imgs {
+    grid-template-columns: repeat(5, 1fr);
   }
-  .my-skills .skills {
-    flex: 1;
-    padding: 0px;
+  .my-skills .container .imgs img {
+    width: 100px;
+    height: 100px;
   }
-}
-
-.my-skills .skill h3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-.my-skills .skill h3 span {
-  font-size: 12px;
-  border: 1px solid white;
-  padding: 3px 5px;
-  border-radius: 4px;
-}
-.my-skills .skill .the-progress {
-  height: 30px;
-  background-color: #eee;
-  position: relative;
-  margin: 10px 0 30px;
-}
-.my-skills .skill .the-progress span {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  background-color: var(--main-color);
-  transition: width 0.5s ease;
 }
 
 @media (max-width: 768px) {
   .my-skills .container {
-    justify-content: left;
-    align-items: flex-start;
     padding: 40px;
+  }
+  .my-skills .container .imgs {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 80px;
+  }
+  .my-skills .container .imgs img {
+    width: 90px;
+    height: 90px;
+  }
+  .my-skills .container .imgs img:hover {
+    transform: rotate(360deg);
   }
 }
 
 @media (max-width: 385px) {
   .my-skills .container {
-    justify-content: left;
-    align-items: flex-start;
     padding: 20px;
+  }
+  .my-skills .container .imgs {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 80px;
+  }
+
+  .my-skills .container .imgs img {
+    width: 90px;
+    height: 90px;
   }
 }
 
