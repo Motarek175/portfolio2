@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -6,6 +8,7 @@
 /* Global Rules */
 :root {
   --main-color: #ff7f50;
+  --alter-color: #dd5f31;
   --main-transition: 0.3s;
 }
 
@@ -42,6 +45,9 @@ a {
   color: white;
   z-index: 1;
   transition: var(--main-transition);
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .main-title::before,
 .main-title::after {
@@ -91,11 +97,11 @@ a {
 }
 
 .header .container .logo a {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: italic;
   color: var(--main-color);
   font-size: 30px;
-  font-weight: 600;
-  font-style: italic;
   cursor: default;
 }
 
@@ -128,11 +134,28 @@ header .header .container .links ul li {
   transition: 0.3s;
   position: relative;
   z-index: 2;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header .container .links ul li a::before {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  background-color: var(--alter-color);
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in;
 }
 
 .header .container .links ul li a:hover {
-  color: var(--main-color);
+  color: var(--alter-color);
+}
+.header .container .links ul li a:hover::before {
+  width: 100%;
 }
 
 /* ------------------------- Landing ------------------------- */
@@ -154,6 +177,7 @@ header .header .container .links ul li {
   text-align: center;
   border-radius: 50%;
   border: 2px solid white;
+  z-index: 3;
 }
 
 .right-icon i:hover {
@@ -407,6 +431,11 @@ header .header .container .links ul li {
   cursor: pointer;
   width: 100%;
 }
+
+.works .container .cards .card button:hover {
+  background-color: var(--alter-color);
+}
+
 .works .container .cards .card button a {
   color: white;
   font-weight: bolder;
@@ -560,6 +589,10 @@ header .header .container .links ul li {
   cursor: pointer;
 }
 
+.contact .container button:hover {
+  background-color: var(--alter-color);
+}
+
 .contact .container button a {
   color: white;
   font-weight: bold;
@@ -701,6 +734,13 @@ footer p {
   text-align: center;
   font-size: 40px;
   position: relative;
+}
+
+footer p span {
+  color: var(--main-color);
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 footer p::before {
