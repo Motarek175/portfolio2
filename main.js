@@ -50,7 +50,7 @@ window.onscroll = () => {
     landimg.style.cssText = "transform: scale(1);";
   }
 
-  if (window.scrollY >= 280 && window.scrollY < 1130) {
+  if (window.scrollY >= 280 && window.scrollY < 1250) {
     mainTitleWorks.style.cssText = "transform: scale(1);";
     cardsWorks.style.cssText = "transform: scale(1);";
   } else {
@@ -58,7 +58,7 @@ window.onscroll = () => {
     cardsWorks.style.cssText = "transform: scale(0);";
   }
 
-  if (window.scrollY >= 1130 && window.scrollY < 1850) {
+  if (window.scrollY >= 1250 && window.scrollY < 2500) {
     mainTitleSkills.style.cssText = "transform: scale(1);";
     imgsSkills.style.cssText = "transform: scale(1);";
   } else {
@@ -66,7 +66,7 @@ window.onscroll = () => {
     imgsSkills.style.cssText = "transform: scale(0);";
   }
 
-  if (window.scrollY >= 1850) {
+  if (window.scrollY >= 2500) {
     contacth2.style.cssText = "transform: scale(1);";
     contactButton.style.cssText = "transform: scale(1);";
     contactMe.style.cssText = "transform: scale(1);";
